@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frango Assado - Faça seu Pedido</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <header>
+      <h1>Frango Assado do Chef!</h1>
+      <p>Peça agora seu frango quentinho e crocante!</p>
+      
+    </header>
+
+    <main>
+      <h2>Cardápio</h2>
+      <div class="menu-item">
+        <h3>Frango Assado Tradicional</h3>
+        <p>R$ 45,00</p>
+        <button onclick="addItem('Frango Assado Tradicional - R$45,00')">
+          Adicionar
+        </button>
+      </div>
+
+      <div class="menu-item">
+        <h3>Frango com Batatas</h3>
+        <p>R$ 55,00</p>
+        <button onclick="addItem('Frango com Batatas - R$55,00')">
+          Adicionar
+        </button>
+      </div>
+
+      <div class="menu-item">
+        <h3>Porção de Batata Frita</h3>
+        <p>R$ 15,00</p>
+        <button onclick="addItem('Batata Frita - R$15,00')">Adicionar</button>
+      </div>
+
+      <button id="pixButton" onclick="mostrarPix()">Ver QR Code do Pix</button>
+
+      <div
+        id="pixArea"
+        style="display: none; text-align: center; margin-top: 20px"
+      >
+        <p>Escaneie o QR Code para pagar:</p>
+        <img
+          src="link_da_sua_imagem_qrcode_aqui"
+          alt="QR Code Pix"
+          width="250"
+        />
+        <p>Ou copie a chave Pix:</p>
+        <p id="chavePix">sua-chave-pix@exemplo.com</p>
+      </div>
+
+      <h2>Seu Pedido</h2>
+      <ul id="pedido"></ul>
+      <button id="enviarPedido" onclick="enviarPedido()">
+        Enviar Pedido no WhatsApp
+      </button>
+
+      
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
